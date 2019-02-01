@@ -1,0 +1,57 @@
+
+package ınterfacekonusu;
+
+public class NewClass {
+    public static void main(String[] args) {
+        
+        int a [] = new int[6];  //Her bir sutün için birer DİZİ tanımlıyorum.
+        int b [] = new int[6];
+        int c [] = new int[6];
+        int d [] = new int[6];
+        
+        int kala = 1;       //Döngü içindeyken kalan değerleri kontrol edeceğim 
+        int kalb = 1;       // birer değişken ve başlangıç değerlerini tanımlayorum.
+        int kalc = 100;   
+        int kald = 1;
+        
+        for (int i= 0;i<6;i++){         //ilk for döngüsü ile dizi index'ini
+            for(int k=kala;k<100;k++){  //ikinci for ile kontrol edeceğim 
+                if(k%15==0){            // sayı aralığını çalıştırıyorum.
+                    kala=k+1;
+                    a[i] = k;
+                    break;              //break ile döngüyü kırıp ilk for döngüsünün 
+                }                       // tekrar sayı artırmasını sağlıyorum.
+            }                           //Her bir diziyi bu şekilde kontrol ederek
+        }                               // dolduruyorum.
+        for (int i= 0;i<6;i++){
+            for(int k=kalb;k<31;k++)
+                if(k%5==0){
+                    kalb=k+1;
+                    b[i]=k;
+                    break;
+                }
+        }
+        for(int i=0; i<6 ; i++){
+            for (int k=kalc;k>49;k--){
+                if(k%10==0){
+                    kalc=k-1;
+                    c[i]= k;
+                    break;
+                }
+            }
+        }
+        for(int i=0 ; i<6 ; i++ ){
+            for(int k=kald ; k<64; k++){
+                kald= kald*2;
+                d[i]= kald;
+                break;
+            }
+        }
+        for (int l =0 ; l<6;l++){           // Tüm diziler doldurulduktan sonra
+            System.out.println("");         // for döngüsü ile hepsini birlikte
+            System.out.print(a[l]+" ");     // yazdırıyorum.
+            System.out.print(b[l]+" ");
+            System.out.print(c[l]+" ");
+            System.out.print(d[l]+" ");
+        }
+    }
